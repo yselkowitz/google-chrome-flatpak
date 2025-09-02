@@ -1,0 +1,63 @@
+platforms:
+    only:
+        - x86_64
+flatpak:
+    id: com.google.Chrome
+    branch: stable
+    runtime-name: flatpak-runtime
+    runtime-version: f42
+    name: google-chrome
+    tags: [proprietary]
+    packages:
+        #- dconf
+        - google-chrome-flatpak-config
+        - zypak
+    command: chrome
+    extra-data:
+        - filename: google-chrome-stable.x86_64.rpm
+          url: https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-139.0.7258.154-1.x86_64.rpm
+          sha256: 3d75a71e3f419f787b5c7395440f8275a0754ea88fc070233be17137b7e36b1d
+          size: 121066173
+          only-arches: [x86_64]
+    finish-args: |-
+        --device=all
+        --share=ipc
+        --share=network
+        --socket=cups
+        --socket=pcsc
+        --socket=pulseaudio
+        --socket=x11
+        --socket=wayland
+        --require-version=1.8.2
+        --system-talk-name=org.bluez
+        --system-talk-name=org.freedesktop.Avahi
+        --system-talk-name=org.freedesktop.UPower
+        --talk-name=org.cinnamon.ScreenSaver
+        --talk-name=org.freedesktop.FileManager1
+        --talk-name=org.freedesktop.Notifications
+        --talk-name=org.freedesktop.ScreenSaver
+        --talk-name=org.freedesktop.secrets
+        --talk-name=org.gnome.ScreenSaver
+        --talk-name=org.gnome.SessionManager
+        --talk-name=org.kde.StatusNotifierWatcher
+        --talk-name=org.kde.kwalletd5
+        --talk-name=org.kde.kwalletd6
+        --talk-name=org.mate.ScreenSaver
+        --talk-name=org.xfce.ScreenSaver
+        --own-name=org.mpris.MediaPlayer2.chromium.*
+        --filesystem=/run/.heim_org.h5l.kcm-socket
+        --filesystem=host-etc
+        --filesystem=xdg-run/pipewire-0:ro
+        --filesystem=xdg-documents
+        --filesystem=xdg-download
+        --filesystem=xdg-music
+        --filesystem=xdg-videos
+        --filesystem=xdg-pictures
+        --filesystem=~/.config/kioslaverc
+    #        --env=GTK_PATH=/app/lib64/gtkmodules
+    #        --filesystem=xdg-run/dconf
+    #        --filesystem=~/.config/dconf:ro
+    #        --talk-name=ca.desrt.dconf
+    #        --env=DCONF_USER_CONFIG_DIR=.config/dconf
+    #        --env=GIO_EXTRA_MODULES=/app/lib64/gio/modules
+    #        --env=GSETTINGS_BACKEND=dconf

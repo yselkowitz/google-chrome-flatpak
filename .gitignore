@@ -1,0 +1,3 @@
+/rpms/*/*.tar.gz
+/rpms/*/*.src.rpm
+/x86_64/
