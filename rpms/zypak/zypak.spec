@@ -2,7 +2,7 @@
 %global commit1 0ac7f5dbf659caa8d1d45cb57e942f2bc565da1e
 
 Name:           zypak
-Version:        2024.01.17
+Version:        2025.09
 Release:        %autorelease
 Summary:        Run Chromium-based binaries in a sandboxed flatpak environment
 
@@ -10,8 +10,6 @@ License:        BSD-3-Clause
 URL:            https://github.com/refi64/zypak
 Source:         %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 Source:         https://github.com/refi64/nickle/archive/%{commit1}/nickle-%{commit1}.tar.gz
-# fix build with GCC 15
-Patch:          https://github.com/flathub/org.electronjs.Electron2.BaseApp/blob/branch/25.08/patches/zypak/fdsdk2508.patch
 
 BuildRequires:  gcc-c++
 BuildRequires:  make
