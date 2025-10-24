@@ -5,7 +5,7 @@ flatpak:
     id: com.google.Chrome
     branch: stable
     runtime-name: flatpak-runtime
-    runtime-version: f42
+    runtime-version: f43
     name: google-chrome
     tags: [proprietary]
     packages:
@@ -15,9 +15,9 @@ flatpak:
     command: chrome
     extra-data:
         - filename: google-chrome-stable.x86_64.rpm
-          url: https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-141.0.7390.65-1.x86_64.rpm
-          sha256: e9e14de3b18ba016c5e69f6b3642f3068490b25b85038acea1833501509ae619
-          size: 123417781
+          url: https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-141.0.7390.122-1.x86_64.rpm
+          sha256: aa6e9e0654a56cd0462987accccf928bdedf3c2d240612546547004cdc7598f9
+          size: 122984837
           only-arches: [x86_64]
     finish-args: |-
         --device=all
