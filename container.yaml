@@ -15,9 +15,9 @@ flatpak:
     command: chrome
     extra-data:
         - filename: google-chrome-stable.x86_64.rpm
-          url: https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-142.0.7444.162-1.x86_64.rpm
-          sha256: e24af585fce2a9da9c9fb03f6e90ab1d63cf0ae128d2e2025ca36f7559ff06bc
-          size: 120975665
+          url: https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-142.0.7444.175-1.x86_64.rpm
+          sha256: 2120aa97d7b89b61ee5d3b3c76c28685e17c73edaedd42ef61b5a609c5d245ac
+          size: 121077101
           only-arches: [x86_64]
     finish-args: |-
         --device=all
