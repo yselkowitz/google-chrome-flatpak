@@ -17,4 +17,5 @@ yq -I 4 -i '
   .flatpak.extra-data[0].size = env(SIZE)' \
   container.yaml
 
+git commit -am $v
 exec flatpak-module build-container-local --install
