@@ -1,5 +1,6 @@
 platforms:
     only:
+        - aarch64
         - x86_64
 flatpak:
     id: com.google.Chrome
@@ -14,11 +15,18 @@ flatpak:
         - zypak
     command: chrome
     extra-data:
-        - filename: google-chrome-stable.x86_64.rpm
+        - filename: google-chrome-stable-151.0.7922.71-1.aarch64.rpm
+          url: https://dl.google.com/linux/chrome/rpm/stable/aarch64/google-chrome-stable-151.0.7922.71-1.aarch64.rpm
+          sha256: 48b1e5ff5850c2124e4cfe179c9dd40adb97455fc777a1249fc9d92e5d5206c0
+          size: 134708553
+          only-arches:
+              - aarch64
+        - filename: google-chrome-stable-151.0.7922.71-1.x86_64.rpm
           url: https://dl.google.com/linux/chrome/rpm/stable/x86_64/google-chrome-stable-151.0.7922.71-1.x86_64.rpm
           sha256: 0ba4f4b43a6f8dbe6034afe57781f4b8e148c0802865a4b6846fa9074cce84ce
           size: 143546529
-          only-arches: [x86_64]
+          only-arches:
+              - x86_64
     finish-args: |-
         --device=all
         --share=ipc

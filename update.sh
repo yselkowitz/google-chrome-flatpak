@@ -8,6 +8,7 @@ b=44
 cat > container.yaml <<_EOF
 platforms:
     only:
+        - aarch64
         - x86_64
 flatpak:
     id: com.google.Chrome
@@ -26,7 +27,7 @@ _EOF
 
 v=$1
 
-for arch in x86_64; do
+for arch in aarch64 x86_64; do
   url=https://dl.google.com/linux/chrome/rpm/stable/${arch}/google-chrome-stable-${v}-1.${arch}.rpm
   f=${url##*/}
   [ -f ${f} ] || curl -LO ${url}
